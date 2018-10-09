@@ -1,1 +1,4 @@
 *.DS_Store
+*.log
+Adversarial Maze/Temp/
+Adversarial Maze/Library/EditorInstance.json
