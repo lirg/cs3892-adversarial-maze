@@ -24,16 +24,21 @@ public class UI : MonoBehaviour {
 
         timer = this.transform.GetComponentInParent<Timer>();
 
+        toast("toasty", 3);
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-        // Shut off text when we've passed timeLimit
+
+        // Fade out text when we've passed timeLimit
 
         float curTime = timer.getTime();
         if(timer.isEnabled() && curTime > timeLimit){
-            timer.stopTimer();
-            text.enabled = false;
+            timer.resetTimer();
+
+            //Fade out text over 2 sec
+            text.CrossFadeAlpha(0, 2.0f, true);
         }
 	}
 
@@ -42,6 +47,8 @@ public class UI : MonoBehaviour {
         timer.startTimer();
         timeLimit = time;
         text.text = message;
-        text.enabled = true;
+
+        //Instantly fade in text
+        text.CrossFadeAlpha(1, 0.0f, true);
     }
 }
