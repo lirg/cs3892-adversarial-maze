@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        startTimer();
+
 	}
 	
 	// Update is called once per frame
@@ -35,5 +35,9 @@ public class Timer : MonoBehaviour {
     public void resetTimer(){
         stopTimer();
         time = 0;
+    }
+
+    public bool isEnabled(){
+        return isTiming;
     }
 }
