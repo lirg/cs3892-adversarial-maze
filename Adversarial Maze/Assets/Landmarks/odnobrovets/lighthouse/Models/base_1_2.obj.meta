@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: c23566a7ed0e5d246925bb0d694b60dd
+timeCreated: 1531489550
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Circle.001_Circle.001_None
+    100002: Circle_Circle.006_glass
+    100004: Cube.001_Cube.006_stair
+    100006: Cube.002_Cube.000_stair_2
+    100008: Cube_Cube.004_stair_2
+    100010: main_0.002_Circle.003_base_4
+    100012: main_0.003_Circle.004_glass
+    100014: main_0.004_Circle.005_base_03
+    100016: main_0_Circle_base_01
+    100018: main_0_Circle_base_02
+    100020: //RootNode
+    100022: default
+    400000: Circle.001_Circle.001_None
+    400002: Circle_Circle.006_glass
+    400004: Cube.001_Cube.006_stair
+    400006: Cube.002_Cube.000_stair_2
+    400008: Cube_Cube.004_stair_2
+    400010: main_0.002_Circle.003_base_4
+    400012: main_0.003_Circle.004_glass
+    400014: main_0.004_Circle.005_base_03
+    400016: main_0_Circle_base_01
+    400018: main_0_Circle_base_02
+    400020: //RootNode
+    400022: default
+    2300000: Circle.001_Circle.001_None
+    2300002: Circle_Circle.006_glass
+    2300004: Cube.001_Cube.006_stair
+    2300006: Cube.002_Cube.000_stair_2
+    2300008: Cube_Cube.004_stair_2
+    2300010: main_0.002_Circle.003_base_4
+    2300012: main_0.003_Circle.004_glass
+    2300014: main_0.004_Circle.005_base_03
+    2300016: main_0_Circle_base_01
+    2300018: main_0_Circle_base_02
+    2300020: default
+    3300000: Circle.001_Circle.001_None
+    3300002: Circle_Circle.006_glass
+    3300004: Cube.001_Cube.006_stair
+    3300006: Cube.002_Cube.000_stair_2
+    3300008: Cube_Cube.004_stair_2
+    3300010: main_0.002_Circle.003_base_4
+    3300012: main_0.003_Circle.004_glass
+    3300014: main_0.004_Circle.005_base_03
+    3300016: main_0_Circle_base_01
+    3300018: main_0_Circle_base_02
+    3300020: default
+    4300000: Circle.001_Circle.001_None
+    4300002: Circle_Circle.006_glass
+    4300004: Cube.001_Cube.006_stair
+    4300006: Cube.002_Cube.000_stair_2
+    4300008: Cube_Cube.004_stair_2
+    4300010: main_0.002_Circle.003_base_4
+    4300012: main_0.003_Circle.004_glass
+    4300014: main_0.004_Circle.005_base_03
+    4300016: main_0_Circle_base_01
+    4300018: main_0_Circle_base_02
+    4300020: default
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
