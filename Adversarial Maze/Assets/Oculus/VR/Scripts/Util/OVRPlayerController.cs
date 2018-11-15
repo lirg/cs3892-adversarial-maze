@@ -31,7 +31,7 @@ public class OVRPlayerController : MonoBehaviour
 	/// <summary>
 	/// The rate acceleration during movement.
 	/// </summary>
-	public float Acceleration = 0.1f;
+	public float Acceleration = 1.0f;
 
 	/// <summary>
 	/// The rate of damping on movement.
@@ -62,7 +62,7 @@ public class OVRPlayerController : MonoBehaviour
 	/// The player will rotate in fixed steps if Snap Rotation is enabled.
 	/// </summary>
 	[Tooltip("The player will rotate in fixed steps if Snap Rotation is enabled.")]
-	public bool SnapRotation = true;
+	public bool SnapRotation = false;
 
 	/// <summary>
 	/// How many fixed speeds to use with linear movement? 0=linear control
@@ -137,7 +137,7 @@ public class OVRPlayerController : MonoBehaviour
 	protected CharacterController Controller = null;
 	protected OVRCameraRig CameraRig = null;
 
-	private float MoveScale = 1.0f;
+	private float MoveScale = 5.0f;
 	private Vector3 MoveThrottle = Vector3.zero;
 	private float FallSpeed = 0.0f;
 	private OVRPose? InitialPose;
