@@ -589,5 +589,11 @@ public class OVRPlayerController : MonoBehaviour
 			transform.rotation = Quaternion.Euler(euler);
 		}
 	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.CompareTag("Pick Up")) {
+			other.gameObject.SetActive (false);
+		}
+	}
 }
 
