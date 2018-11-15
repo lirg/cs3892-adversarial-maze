@@ -20,6 +20,7 @@ limitations under the License.
 ************************************************************************************/
 
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -134,6 +135,14 @@ public class OVRPlayerController : MonoBehaviour
 	/// </summary>
 	public bool EnableRotation = true;
 
+	/// <summary>
+	/// Keeps track of collected pick ups
+	/// </summary>
+	public HashSet<string> collectedPickUps = new HashSet<string>();
+
+	Logger logger;
+	UI ui;
+
 	protected CharacterController Controller = null;
 	protected OVRCameraRig CameraRig = null;
 
@@ -158,6 +167,9 @@ public class OVRPlayerController : MonoBehaviour
 		var p = CameraRig.transform.localPosition;
 		p.z = OVRManager.profile.eyeDepth;
 		CameraRig.transform.localPosition = p;
+
+		logger = GameObject.Find("Utils").GetComponent<Logger>();
+        ui = GameObject.Find("UI").GetComponent<UI>();
 	}
 
 	void Awake()
@@ -593,7 +605,13 @@ public class OVRPlayerController : MonoBehaviour
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.CompareTag("Pick Up")) {
 			other.gameObject.SetActive (false);
+			collectedPickUps.Add(other.gameObject.name);
+
+            int count = collectedPickUps.Count;
+            ui.toast("Object " + count + " found!", 3);
+            logger.Log("Object " + count + " found", 0);
 		}
 	}
+
 }
 
