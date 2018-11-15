@@ -42,13 +42,14 @@ public class UI : MonoBehaviour {
         }
 	}
 
-    void toast(string message, float time){
+    // Display message on VR UI for time seconds
+    public void toast(string message, float time){
         timer.resetTimer();
         timer.startTimer();
         timeLimit = time;
         text.text = message;
 
-        //Instantly fade in text
-        text.CrossFadeAlpha(1, 0.0f, true);
+        //Fade in text over 1 sec
+        text.CrossFadeAlpha(1, 1.0f, true);
     }
 }
