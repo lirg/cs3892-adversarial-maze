@@ -9,8 +9,14 @@ public class SpherePlayerController : MonoBehaviour {
 
 	private Rigidbody rb;
 
+    Logger logger;
+    UI ui;
+
 	void Start() {
+        collectedPickUps = new HashSet<string>();
 		rb = GetComponent<Rigidbody>();
+        logger = GameObject.Find("Utils").GetComponent<Logger>();
+        ui = GameObject.Find("UI").GetComponent<UI>();
 	}
 
 	// Update is called once per frame
@@ -26,6 +32,10 @@ public class SpherePlayerController : MonoBehaviour {
 		if (other.gameObject.CompareTag("Pick Up")) {
 			other.gameObject.SetActive(false);
 			collectedPickUps.Add(other.gameObject.name);
+
+            int count = collectedPickUps.Count;
+            ui.toast("Object " + count + " found!", 3);
+            logger.Log("Object " + count + " found", 0);
 		}
 	}
 }

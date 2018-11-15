@@ -12,7 +12,7 @@ public class UI : MonoBehaviour {
 
     public Text text;
 
-    Timer timer;
+    public Timer timer;
     float timeLimit = 0;
 
     // Use this for initialization
@@ -21,8 +21,9 @@ public class UI : MonoBehaviour {
         camTransform = rig.centerEyeAnchor;
 
         canvas = FindObjectOfType<Canvas>();
+        //text = canvas.GetComponentInChildren<Text>();
 
-        timer = this.transform.GetComponentInParent<Timer>();
+        //timer = GameObject.Find("UI").GetComponent<Timer>();
 
         toast("toasty", 3);
 
