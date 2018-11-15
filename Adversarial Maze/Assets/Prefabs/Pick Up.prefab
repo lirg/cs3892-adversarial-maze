@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23667088099936306}
   - component: {fileID: 65717049322059584}
   - component: {fileID: 114020335441420546}
-  - component: {fileID: 54943934260871174}
+  - component: {fileID: 54076577330896208}
   m_Layer: 0
   m_Name: Pick Up
   m_TagString: Pick Up
@@ -86,7 +86,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1955302631738018}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54943934260871174
+--- !u!54 &54076577330896208
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}

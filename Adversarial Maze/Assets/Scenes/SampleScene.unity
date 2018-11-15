@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0032499006, g: 0.0664017, b: 0.21925923, a: 1}
+  m_IndirectSpecularColor: {r: 0.0034729051, g: 0.06637629, b: 0.21922687, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1422,7 +1422,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1955302631738018, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
       propertyPath: m_Name
-      value: Pick Up (2)
+      value: Pick Up 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
@@ -1974,6 +1974,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1955302631738018, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
+      propertyPath: m_Name
+      value: Pick Up 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
   m_IsPrefabAsset: 0
@@ -2478,31 +2482,6 @@ MonoBehaviour:
   maxRenderScale: 1
   _headPoseRelativeOffsetRotation: {x: 0, y: 0, z: 0}
   _headPoseRelativeOffsetTranslation: {x: 0, y: 0, z: 0}
-  expandMixedRealityCapturePropertySheet: 0
-  enableMixedReality: 0
-  compositionMethod: 0
-  extraHiddenLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  capturingCameraDevice: 0
-  flipCameraFrameHorizontally: 0
-  flipCameraFrameVertically: 0
-  handPoseStateLatency: 0
-  sandwichCompositionRenderLatency: 0
-  sandwichCompositionBufferedFrames: 8
-  chromaKeyColor: {r: 0, g: 1, b: 0, a: 1}
-  chromaKeySimilarity: 0.6
-  chromaKeySmoothRange: 0.03
-  chromaKeySpillRange: 0.06
-  useDynamicLighting: 0
-  depthQuality: 1
-  dynamicLightingSmoothFactor: 8
-  dynamicLightingDepthVariationClampingValue: 0.001
-  virtualGreenScreenType: 0
-  virtualGreenScreenTopY: 10
-  virtualGreenScreenBottomY: -10
-  virtualGreenScreenApplyDepthCulling: 0
-  virtualGreenScreenDepthTolerance: 0.2
   _trackingOriginType: 0
   usePositionTracking: 1
   useRotationTracking: 1
@@ -9822,7 +9801,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1955302631738018, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
       propertyPath: m_Name
-      value: Pick Up (3)
+      value: Pick Up 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
@@ -9864,7 +9843,7 @@ Transform:
   - {fileID: 2106306898}
   - {fileID: 2136242430}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1481864662
 Prefab:
@@ -10730,7 +10709,7 @@ Transform:
   - {fileID: 682685612}
   - {fileID: 674736607}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1571262049 stripped
 GameObject:
@@ -11507,7 +11486,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1955302631738018, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
       propertyPath: m_Name
-      value: Pick Up (1)
+      value: Pick Up 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b7472183b6d74c929e9ca0129069a3e, type: 2}
