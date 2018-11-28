@@ -146,7 +146,7 @@ public class OVRPlayerController : MonoBehaviour
 	protected CharacterController Controller = null;
 	protected OVRCameraRig CameraRig = null;
 
-	private float MoveScale = 5.0f;
+	private float MoveScale = 25.0f;
 	private Vector3 MoveThrottle = Vector3.zero;
 	private float FallSpeed = 0.0f;
 	private OVRPose? InitialPose;
