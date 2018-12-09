@@ -142,6 +142,7 @@ public class OVRPlayerController : MonoBehaviour
 
 	Logger logger;
 	UI ui;
+	WallMover wallmover;
 
 	protected CharacterController Controller = null;
 	protected OVRCameraRig CameraRig = null;
@@ -170,6 +171,7 @@ public class OVRPlayerController : MonoBehaviour
 
 		logger = GameObject.Find("Utils").GetComponent<Logger>();
         ui = GameObject.Find("UI").GetComponent<UI>();
+        wallmover = GameObject.Find("Utils").GetComponent<WallMover>();
 	}
 
 	void Awake()
@@ -608,6 +610,9 @@ public class OVRPlayerController : MonoBehaviour
 			collectedPickUps.Add(other.gameObject.name);
 
             int count = collectedPickUps.Count;
+            Debug.Log(other.gameObject.name);
+            wallmover.moveWalls(other.gameObject.name);
+
             ui.toast("Object " + count + " found!", 3);
             logger.Log("Object " + count + " found", 0);
 		}

@@ -35,7 +35,7 @@ public class SpherePlayerController : MonoBehaviour {
 			other.gameObject.SetActive(false);
 			collectedPickUps.Add(other.gameObject.name);
 
-            wallmover.moveWallDown(1);
+            // wallmover.moveWallDown(1);
             int count = collectedPickUps.Count;
             ui.toast("Object " + count + " found!", 3);
             logger.Log("Object " + count + " found", 0);

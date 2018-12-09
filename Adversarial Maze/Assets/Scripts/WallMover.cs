@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WallMover : MonoBehaviour {
 
-    GameObject wall1;
+    GameObject wall1_1;
+    GameObject wall1_2;
 
     GameObject curMovingWall;
 
@@ -15,9 +16,11 @@ public class WallMover : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        wall1 = GameObject.Find("movablewall1");
-        startPosition = target = wall1.transform.position;
-        curMovingWall = wall1;
+        wall1_1 = GameObject.Find("movablewall1_1");
+        wall1_2 = GameObject.Find("movablewall1_2");
+        startPosition = target = wall1_1.transform.position;
+        curMovingWall = wall1_1;
+        Debug.Log("Started wallmover");
 	}
 	
 	// Update is called once per frame
@@ -26,19 +29,30 @@ public class WallMover : MonoBehaviour {
         curMovingWall.transform.position = Vector3.Lerp(startPosition, target, t);
     }
 
-    private void TranslateDown(GameObject wall, float time){
+    private void TranslateY(GameObject wall, float time, int distance){
         t = 0;
         startPosition = wall.transform.position;
         timeToReachTarget = time;
         target = wall.transform.position;
-        target.y -= 50;
+        target.y += distance;
         curMovingWall = wall;
     }
 
-    public void moveWallDown(int wall){
-        switch(wall){
-            case 1:
-                TranslateDown(wall1, 2);
+    private void TranslateX(GameObject wall, float time, int distance) {
+        t = 0;
+        startPosition = wall.transform.position;
+        timeToReachTarget = time;
+        target = wall.transform.position;
+        target.x += distance;
+        curMovingWall = wall;
+    }
+
+    public void moveWalls(string name){
+        switch(name){
+            case "Pick Up 1":
+                Debug.Log("Moving walls for pickup 1");
+                TranslateY(wall1_1, 5, -25);
+                TranslateX(wall1_2, 5, 10);
                 break;
         }
     }
