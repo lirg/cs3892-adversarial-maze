@@ -50,10 +50,15 @@ public class WallMover : MonoBehaviour {
     public void moveWalls(string name){
         switch(name){
             case "Pick Up 1":
-                Debug.Log("Moving walls for pickup 1");
-                TranslateY(wall1_1, 5, -25);
-                TranslateX(wall1_2, 5, 10);
+                StartCoroutine(move1());
                 break;
         }
+    }
+
+    IEnumerator move1() {
+        Debug.Log("Moving walls for pickup 1");
+        TranslateY(wall1_1, 4, -25);
+        yield return new WaitForSeconds(4);
+        TranslateX(wall1_2, 3, 10);
     }
 }
