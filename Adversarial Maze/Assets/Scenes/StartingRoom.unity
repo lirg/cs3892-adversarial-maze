@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 105236696}
   - component: {fileID: 105236695}
   - component: {fileID: 105236694}
+  - component: {fileID: 105236697}
   m_Layer: 5
   m_Name: Button3
   m_TagString: homeButtonDynamicLandmarks
@@ -292,7 +293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -2}
+  m_AnchoredPosition: {x: 0, y: -2.17}
   m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &105236694
@@ -370,6 +371,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 105236692}
   m_CullTransparentMesh: 0
+--- !u!65 &105236697
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 105236692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &110004061
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +394,7 @@ GameObject:
   - component: {fileID: 110004065}
   - component: {fileID: 110004064}
   - component: {fileID: 110004063}
+  - component: {fileID: 110004066}
   m_Layer: 5
   m_Name: Button
   m_TagString: homeButtonStatic
@@ -482,6 +496,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110004061}
   m_CullTransparentMesh: 0
+--- !u!65 &110004066
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110004061}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &180603754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1229,7 @@ GameObject:
   - component: {fileID: 830567473}
   - component: {fileID: 830567472}
   - component: {fileID: 830567471}
+  - component: {fileID: 830567474}
   m_Layer: 5
   m_Name: Button2
   m_TagString: homeButtonDynamicWalls
@@ -1304,6 +1331,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830567469}
   m_CullTransparentMesh: 0
+--- !u!65 &830567474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 830567469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &841018915
 GameObject:
   m_ObjectHideFlags: 0
