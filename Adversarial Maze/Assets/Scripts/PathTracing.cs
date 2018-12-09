@@ -22,7 +22,7 @@ public class PathTracing : MonoBehaviour {
         }
         if (PlayerFinishedMaze() && !printedMaze){
             Color red = Color.red;
-            LineRenderer lineRenderer = gameObject.AddComponent<LineRenderer>();
+            LineRenderer lineRenderer = GameObject.Find("OVRPlayerController").GetComponent<LineRenderer>();
             lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
             lineRenderer.startColor = red;
             lineRenderer.endColor = red;
