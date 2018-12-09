@@ -804,7 +804,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 47919245}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -14.9, y: 3.12, z: -223.4}
+  m_LocalPosition: {x: -19.7, y: 3.12, z: -246.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 196668780}
@@ -4073,6 +4073,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 122286, guid: a9c76a0f31a399647af506139666869e, type: 2}
+      propertyPath: m_Name
+      value: Lion_LW
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c76a0f31a399647af506139666869e, type: 2}
   m_IsPrefabAsset: 0
@@ -4408,7 +4412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e38e16f724150a044b13befca5e552ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.7
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e38e16f724150a044b13befca5e552ac, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4444,7 +4448,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: e38e16f724150a044b13befca5e552ac, type: 3}
       propertyPath: m_Name
-      value: Horse statue
+      value: Horse_LW
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e38e16f724150a044b13befca5e552ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -10020,6 +10024,14 @@ Prefab:
       propertyPath: m_TagString
       value: Fountain
       objectReference: {fileID: 0}
+    - target: {fileID: 139446, guid: 8142860b8f89a564faf152e3c8b743e7, type: 2}
+      propertyPath: m_Name
+      value: fountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 178508, guid: 8142860b8f89a564faf152e3c8b743e7, type: 2}
+      propertyPath: m_Name
+      value: fountain_LW
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8142860b8f89a564faf152e3c8b743e7, type: 2}
   m_IsPrefabAsset: 0
@@ -15168,7 +15180,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1204408703077684, guid: 94f10da449387134eb5a2276906ccdfd, type: 2}
       propertyPath: m_Name
-      value: CarvedLampPost.001
+      value: CarvedLampPost_LW
       objectReference: {fileID: 0}
     - target: {fileID: 4044910024888608, guid: 94f10da449387134eb5a2276906ccdfd, type: 2}
       propertyPath: m_LocalScale.y
