@@ -31,20 +31,14 @@ public class UISelecter : MonoBehaviour {
         Debug.DrawRay(rayStart, rayDirection * range, Color.green);
         if (Physics.Raycast(rayStart, rayDirection, out hit, range))
         {
-            bool landmarkFound = colliderTags.Contains(hit.collider.tag);
-            if (landmarkFound)
-            {   //found landmark
-                if(hit.collider.tag == "homeButtonStatic"){
-                    Debug.Log(hit.collider.tag);
-                }
-                else if (hit.collider.tag == "homeButtonDynamicWalls")
-                {
-                    Debug.Log(hit.collider.tag);
-                }
-                else if (hit.collider.tag == "homeButtonDynamicLandmarks")
-                {
-                    Debug.Log(hit.collider.tag);
-                }
+            if(hit.collider.tag == "homeButtonStatic"){
+                Debug.Log(hit.collider.tag);
+            }
+            else if(hit.collider.tag == "homeButtonDynamicLandmarks"){
+                Debug.Log(hit.collider.tag);
+            }
+            else if(hit.collider.tag == "homeButtonDynamicWalls"){
+                Debug.Log(hit.collider.tag);
             }
         }
     }
