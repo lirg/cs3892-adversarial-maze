@@ -9,6 +9,9 @@ TagManager:
   - Lion
   - Gargoyle
   - Pick Up
+  - homeButtonStatic
+  - homeButtonDynamicWalls
+  - homeButtonDynamicLandmarks
   layers:
   - Default
   - TransparentFX
