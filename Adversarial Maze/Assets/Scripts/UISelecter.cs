@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UISelecter : MonoBehaviour {
 
@@ -8,6 +9,10 @@ public class UISelecter : MonoBehaviour {
     Transform camTransform;
 
     HashSet<string> colliderTags;
+    string cur = null;
+    string prev = null;
+
+    RadialBar rb;
 
     int range = 1000;
 
@@ -15,6 +20,7 @@ public class UISelecter : MonoBehaviour {
     void Start () {
         rig = FindObjectOfType<OVRCameraRig>();
         camTransform = rig.centerEyeAnchor;
+        rb = FindObjectOfType<RadialBar>();
 
         colliderTags = new HashSet<string>();
         colliderTags.Add("homeButtonStatic");
@@ -31,15 +37,38 @@ public class UISelecter : MonoBehaviour {
         Debug.DrawRay(rayStart, rayDirection * range, Color.green);
         if (Physics.Raycast(rayStart, rayDirection, out hit, range))
         {
-            if(hit.collider.tag == "homeButtonStatic"){
-                Debug.Log(hit.collider.tag);
+            prev = cur;
+            if (colliderTags.Contains(hit.collider.tag)){
+                cur = hit.collider.tag;
+                if (cur != prev)
+                {
+                    rb.startFill();
+                }
+                if (cur == prev)
+                {
+                    if (rb.filled())
+                    {
+                        switch (cur)
+                        {
+                            //switch scenes
+                            case "homeButtonStatic":
+                                SceneManager.LoadScene("Static Condition", LoadSceneMode.Single);
+                                break;
+                            case "homeButtonDynamicWalls":
+                                SceneManager.LoadScene("Dynamic Walls", LoadSceneMode.Single);
+                                break;
+                            case "homeButtonDynamicLandmarks":
+                                SceneManager.LoadScene("Dynamic Landmark", LoadSceneMode.Single);
+                                break;
+                        }
+                    }
+                }
             }
-            else if(hit.collider.tag == "homeButtonDynamicLandmarks"){
-                Debug.Log(hit.collider.tag);
-            }
-            else if(hit.collider.tag == "homeButtonDynamicWalls"){
-                Debug.Log(hit.collider.tag);
-            }
+        }
+        else
+        {
+            rb.stopFill();
+            cur = null;
         }
     }
 }
