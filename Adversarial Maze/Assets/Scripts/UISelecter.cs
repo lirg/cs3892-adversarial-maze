@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UISelecter : MonoBehaviour {
 
     OVRCameraRig rig;
     Transform camTransform;
+
+	public Button button1, button2, button3;
 
     HashSet<string> colliderTags;
     string cur = null;
@@ -40,6 +43,19 @@ public class UISelecter : MonoBehaviour {
             prev = cur;
             if (colliderTags.Contains(hit.collider.tag)){
                 cur = hit.collider.tag;
+				switch (cur)
+				{
+				//switch scenes
+				case "homeButtonStatic":
+					button1.Select();
+					break;
+				case "homeButtonDynamicWalls":
+					button2.Select();
+					break;
+				case "homeButtonDynamicLandmarks":
+					button3.Select();
+					break;
+				}
                 if (cur != prev)
                 {
                     rb.startFill();
@@ -58,17 +74,23 @@ public class UISelecter : MonoBehaviour {
                                 SceneManager.LoadScene("Dynamic Walls", LoadSceneMode.Single);
                                 break;
                             case "homeButtonDynamicLandmarks":
-                                SceneManager.LoadScene("Dynamic Landmark", LoadSceneMode.Single);
+                                SceneManager.LoadScene("Dynamic LW", LoadSceneMode.Single);
                                 break;
                         }
                     }
                 }
+            }
+            else{
+                rb.stopFill();
+                cur = null;
+                prev = null;
             }
         }
         else
         {
             rb.stopFill();
             cur = null;
+            prev = null;
         }
     }
 }

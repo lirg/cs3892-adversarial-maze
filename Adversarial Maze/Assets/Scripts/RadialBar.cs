@@ -7,6 +7,7 @@ public class RadialBar : MonoBehaviour {
 
     public Image LoadingBar;
     public Image LoadingBarCenter;
+
     float currentValue = 0;
     float speed = 50;
 
@@ -15,6 +16,8 @@ public class RadialBar : MonoBehaviour {
     public void startFill(){
         filling = true;
         currentValue = 0;
+        LoadingBar.fillAmount = 0;
+        LoadingBarCenter.fillAmount = 0;
     }
 
     public void stopFill(){
@@ -30,7 +33,7 @@ public class RadialBar : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-       
+
 	}
 	
 	// Update is called once per frame

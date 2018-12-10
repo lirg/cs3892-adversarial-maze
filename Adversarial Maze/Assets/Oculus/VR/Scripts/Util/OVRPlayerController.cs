@@ -22,6 +22,7 @@ limitations under the License.
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controls the player's movement in virtual reality.
@@ -143,6 +144,9 @@ public class OVRPlayerController : MonoBehaviour
 	Logger logger;
 	UI ui;
 	WallMover wallmover;
+	bool finished = false;
+	float time = 0;
+	Scene scene;
 
 	protected CharacterController Controller = null;
 	protected OVRCameraRig CameraRig = null;
@@ -172,6 +176,7 @@ public class OVRPlayerController : MonoBehaviour
 		logger = GameObject.Find("Utils").GetComponent<Logger>();
         ui = GameObject.Find("UI").GetComponent<UI>();
         wallmover = GameObject.Find("Utils").GetComponent<WallMover>();
+        scene = SceneManager.GetActiveScene();
 	}
 
 	void Awake()
@@ -223,6 +228,14 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.E))
 			buttonRotation += RotationRatchet;
+
+		if(finished){
+			if(time > 5){
+				SceneManager.LoadScene("StartingRoom", LoadSceneMode.Single);
+			}else{
+				time += Time.deltaTime;
+			}
+		}
 	}
 
 	protected virtual void UpdateController()
@@ -611,9 +624,19 @@ public class OVRPlayerController : MonoBehaviour
 
             int count = collectedPickUps.Count;
             Debug.Log(other.gameObject.name);
-            wallmover.moveWalls(other.gameObject.name);
+        	if (scene.name != "Static Condition") {
+            	wallmover.moveWalls(other.gameObject.name);
+        	}
 
-            ui.toast("Object " + count + " found!", 3);
+            if(count < 5){
+            	ui.toast("Object " + count + " found!", 3);
+        	}else{
+        		finished = true;
+        		float time = logger.GameTimer.getTime();
+        		int min = (int) (time / 60);
+        		int sec = (int) (time - time/60);
+        		ui.toast("All objects found! Maze completed in " + min + " minutes and " + sec + " seconds.", 5);
+        	}
             logger.Log("Object " + count + " found", 0);
 		}
 	}

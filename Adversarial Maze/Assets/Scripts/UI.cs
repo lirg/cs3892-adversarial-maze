@@ -21,11 +21,9 @@ public class UI : MonoBehaviour {
         camTransform = rig.centerEyeAnchor;
 
         canvas = FindObjectOfType<Canvas>();
-        //text = canvas.GetComponentInChildren<Text>();
 
-        //timer = GameObject.Find("UI").GetComponent<Timer>();
-
-        toast("toasty", 3);
+        //hello world
+        toast("There are 5 collectibles hidden in the maze. Find them!", 5);
 
     }
 	
