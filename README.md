@@ -2,7 +2,7 @@
 
 ### Quick Links
 * [Build](https://drive.google.com/drive/folders/1m8FLfdRvoRlUiGBp4xGgteITzYdHPfdW?usp=sharing)
-* [Demo Video]()
+* [Demo Video](https://drive.google.com/file/d/15uf8p-1-cpBlIPdGeUlJ0-NjKlPSq3Yo/view?usp=sharing)
 ## Summary
 The Adversarial Maze serves as a mental endurance exercise for a psychology study. Based off of the Harry Potter hedge maze, the adversarial maze serves to bewilder and fluster players. The maze is set up with 5 yellow cubes - the collectibles - for the player to collect. There are landmarks scattered throughout the maze that serve as reference points for the player as they traverse the maze. The maze is split into three levels, each with increasing difficulty:
 
@@ -14,7 +14,6 @@ A timer and path tracer runs during the maze which will be logged after the maze
 ## Technical Specs
 * Unity Version: [2018.2.10f](https://unity3d.com/get-unity/download/archive)
 * VR Hardware: Oculus Rift
-* Assets:
 
 ## Scripts
 #### OVRPlayerController
