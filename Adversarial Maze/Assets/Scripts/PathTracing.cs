@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Traces path of player as they traverse maze
+/// </summary>
 public class PathTracing : MonoBehaviour {
 
 

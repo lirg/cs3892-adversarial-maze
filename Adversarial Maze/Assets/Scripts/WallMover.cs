@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Responsible for moving objects in the maze. Run by the OVRPlayerController when a pickup is collected.
+/// </summary>
 public class WallMover : MonoBehaviour {
 
     GameObject wall1_1;
